@@ -1,0 +1,118 @@
+exports.seed = function (knex, Promise) {
+  // Deletes ALL existing entries
+  return knex("cars")
+    .truncate()
+    .then(function () {
+      // Inserts seed entries
+      return knex("cars").insert([
+        {
+          id: 1,
+          VIN: "1HGBH41JXMN109187",
+          MAKE: "Toyota",
+          Model: "Corona",
+          Mileage: "49000",
+          Transmission: "Manual",
+          Title: "Clear",
+        },
+        {
+          id: 2,
+          VIN: "1HGAB42JXMN109188",
+          MAKE: "Toyota",
+          Model: "Corolla",
+          Mileage: "128000",
+          Transmission: "Manual",
+          Title: "Salvage",
+        },
+        {
+          id: 3,
+          VIN: "1HGCD43JXMN109189",
+          MAKE: "Toyota",
+          Model: "Corona",
+          Mileage: "100000",
+          Transmission: "Manual",
+          Title: "Junk",
+        },
+        {
+          id: 4,
+          VIN: "1HGEF44JXMN109180",
+          MAKE: "Toyota",
+          Model: "Camry",
+          Mileage: "99000",
+          Transmission: "Auto",
+          Title: "Clear",
+        },
+        {
+          id: 5,
+          VIN: "1HGGH45JXMN109181",
+          MAKE: "Honda",
+          Model: "Civic",
+          Mileage: "120000",
+          Transmission: "Manual",
+          Title: "Reconsructed",
+        },
+        {
+          id: 6,
+          VIN: "1HGIJ46JXMN109182",
+          MAKE: "Honda",
+          Model: "Jazz",
+          Mileage: "445100",
+          Transmission: "Auto",
+          Title: "Clear",
+        },
+        {
+          id: 7,
+          VIN: "1HGKL47JXMN109183",
+          MAKE: "BMW",
+          Model: "X5",
+          Mileage: "480100",
+          Transmission: "CVT",
+          Title: "Bonded",
+        },
+        {
+          id: 8,
+          VIN: "1HGMN48JXMN109184",
+          MAKE: "Nissan",
+          Model: "Micra",
+          Mileage: "483000",
+          Transmission: "Auto",
+          Title: "Clear",
+        },
+        {
+          id: 9,
+          VIN: "1HGOL49JXMN109185",
+          MAKE: "Nissan",
+          Model: "Juke",
+          Mileage: "489100",
+          Transmission: "Manual",
+          Title: "Salvage",
+        },
+        {
+          id: 10,
+          VIN: "1HGPQ40JXMN109145",
+          MAKE: "Fiat",
+          Model: "Panda",
+          Mileage: "487000",
+          Transmission: "CVT",
+          Title: "Dismantled",
+        },
+        {
+          id: 11,
+          VIN: "1HGRS51JXMN109146",
+          MAKE: "Jaguar",
+          Model: "XF",
+          Mileage: "480100",
+          Transmission: "Manual",
+          Title: "Junk",
+        },
+        {
+          id: 12,
+          VIN: "1HGTU52JXMN109147",
+          MAKE: "Citroen",
+          Model: "Cactus Hatch",
+          Mileage: "48000",
+          Transmission: "Manual",
+          Title: "Clear",
+        },
+      ]);
+    });
+};
